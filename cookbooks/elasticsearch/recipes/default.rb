@@ -35,7 +35,7 @@ if ['util'].include?(node[:instance_role])
   #
   Chef::Log.info "Updating Sun JDK"
   package "dev-java/sun-jdk" do
-    version "1.6.0.37"
+    version "1.6.0.45"
     action :upgrade
   end
 
