@@ -34,8 +34,9 @@ if ['util'].include?(node[:instance_role])
   # Update JAVA as the Java on the AMI can sometimes crash
   #
   Chef::Log.info "Updating Sun JDK"
-  package "dev-java/sun-jdk" do
-    version "1.6.0.45"
+  package "dev-java/icedtea-bin" do
+    # https://github.com/engineyard/ey-cloud-recipes/issues/135
+    version "6.1.12.6"
     action :upgrade
   end
 
